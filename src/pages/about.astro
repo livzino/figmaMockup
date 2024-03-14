@@ -9,10 +9,25 @@ import Button from "../components/Button.astro";
 import Checkmark from "../components/Checkmark.astro";
 import Numbers from "../components/Numbers.astro";
 import Videoimg from "../components/Videoimg.astro";
+import Facecard from "../components/Facecard.astro";
+import Nav from "../components/Nav.astro";
 import "../styles/global.css";
 ---
 
 <Base>
+   <Nav />
+    <div class="containerabout">
+
+	<img src="./images/heroimage.jpg" alt="heroimage" class="imghero">
+
+	<div class="services">
+			<Headingpill variant="yellow" title="services"  />
+		<Titles title="Creative Services For Boost Your Business Growth" 
+tekst=""/>
+	</div>
+
+</div>
+
 <section class="firstflex">
 
     <div>
@@ -59,16 +74,62 @@ tekst="Ippsum is the result of synergy between our teams and our customers. Our 
 </div>
 <Videoimg />
 </section>
+<section class="full">
+    <div>
+           <Columns cols="3">
+    <Headingpill variant="yellow" title="Our team" />
+    </Columns>
+<Titles title="We champion the bold to achieve the extraordinary" 
+tekst="Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team."/>
+</div>
+<div class="facefl">
+<Facecard variant="jasmine" title="Sarah Jasmine"/>
+<Facecard variant="john" title="John Carter"/>
+<Facecard variant="daisy" title="Daisy Stella"/>
+</div>
+</section>
 <section>
     <img src="../images/ctabox.png" alt="">
 </section>
+
 
 
 </Base>
 
 
 <style>
-  
+    .containerabout {
+  display: grid;
+  place-items: center;
+}
+.imghero {
+  width: 120%;
+  height: 100%;
+}
+.imghero,
+.services {
+   grid-area: 1 / 1;
+
+}
+.services{
+	padding: 3rem 3.75rem 3.625rem 3.75rem;
+border-radius: 1.8125rem;
+background: rgba(255, 255, 255, 0.85);
+
+backdrop-filter: blur(5.5px);
+display: inline-flex;
+
+flex-direction: column;
+align-items: flex-start;
+gap: 0.625rem;
+
+}
+  .facefl{
+    display: flex;
+flex-flow: row;
+justify-content: center;
+gap: 51px;
+  }
 .centered {
     display: flex;
     flex-direction: column;

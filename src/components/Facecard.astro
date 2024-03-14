@@ -1,0 +1,106 @@
+---
+const { title, variant } = Astro.props;
+import "../styles/global.css";
+import { Icon } from "astro-icon/components";
+
+
+---
+
+<article>
+    <div data-variant={variant}></div>
+<div class="facec">
+
+<!-- <img src="./images/firstface.jpg" alt="" class="imgfa"> -->
+  <h4>{title}</h4>
+<p>Leverage agile frameworks to provide a robust synopsis for high level overviews.</p>
+<div class="iconflex">
+  <Icon name="instagram" />
+    <Icon name="facebook" />
+      <Icon name="twitter" />
+</div>
+
+</div>
+</article>
+<style>
+
+  [data-variant="jasmine"] {
+   background-image: url("./images/firstface.jpg") ;
+     background-repeat: no-repeat;
+       background-size: cover;
+
+width: 21.5rem;
+height: 22.5rem;
+  border-radius:var(  --card-radius);
+  }
+    [data-variant="john"] {
+   background-image: url("./images/john.png") ;
+     background-repeat: no-repeat;
+       background-size: cover;
+
+width: 21.5rem;
+height: 22.5rem;
+  border-radius:var(  --card-radius);
+  }
+      [data-variant="daisy"] {
+   background-image: url("./images/daisy.jpg") ;
+     background-repeat: no-repeat;
+       background-size: cover;
+
+width: 21.5rem;
+height: 22.5rem;
+  border-radius:var(  --card-radius);
+  }
+   [data-variant="maya"] {
+   background-image: url("./images/maya.jpg") ;
+     background-repeat: no-repeat;
+       background-size: cover;
+
+width: 21.5rem;
+height: 22.5rem;
+  border-radius:var(  --card-radius);
+  }
+     [data-variant="ryan"] {
+   background-image: url("./images/ryan.jpg") ;
+     background-repeat: no-repeat;
+       background-size: cover;
+
+width: 21.5rem;
+height: 22.5rem;
+  border-radius:var(  --card-radius);
+  }
+     [data-variant="lilly"] {
+   background-image: url("./images/lilly.jpg") ;
+     background-repeat: no-repeat;
+       background-size: cover;
+
+width: 21.5rem;
+height: 22.5rem;
+  border-radius:var(  --card-radius);
+  }
+[data-icon="instagram"] {    
+    width: 1.3rem;    
+    height: 1.3rem;  }
+[data-icon="facebook"] {    
+    width: 1.3rem;    
+    height: 1.3rem;  }
+
+    [data-icon="twitter"] {    
+    width: 1.3rem;    
+    height: 1.3rem;  }
+
+ .iconflex{
+display: flex;
+gap: 1.5rem;
+justify-content: center;
+margin: 20px;
+ }
+
+.facec{
+        display: flex;
+width: 20.9375rem;
+flex-direction: column;
+  padding: var(--card-padding);
+  text-align:center;
+
+
+}
