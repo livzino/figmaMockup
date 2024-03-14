@@ -1,0 +1,85 @@
+---
+const { title, variant } = Astro.props;
+import { Icon } from "astro-icon/components";
+import "../styles/global.css"
+---
+
+<article data-variant={variant}>
+  <Icon name="folder" />
+  <h3>{title}</h3>
+  <p>Lorem ipsum dolor sit amet consectetur.</p>
+  <a href="#">Read More</a>
+</article>
+
+<style>
+  article {
+    padding: 2.25rem 1.4375rem;
+    border-radius: 1.25rem;
+
+  }
+  a{
+    text-decoration: none;
+    color: var(--color-text);
+    font-family: lato;
+    font-size: 1.125rem;
+    font-style: normal;
+font-weight: 600;
+line-height: 1.8rem;
+  }
+
+  [data-variant="original"] {
+    border: 1px solid #EAEAEA;
+    background: #fff;
+    color: #000;
+  }
+
+  [data-variant="primary"] {
+    background: lightgreen;
+    color: #000;
+  }
+
+  [data-variant="secondary"] {
+    background: blue;
+    color: #fff;
+  }
+
+  [data-icon="folder"] {
+    width: 3.29863rem;
+    height: 3.29863rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.375rem;
+    margin-bottom: 1.375rem;
+  }
+
+  [data-icon="barChart"] {
+    width: 3.29863rem;
+    height: 3.29863rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.375rem;
+    margin-bottom: 1.375rem;
+  }
+
+  [data-icon="globe"] {
+    width: 3.29863rem;
+    height: 3.29863rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.375rem;
+    margin-bottom: 1.375rem;
+  }
+
+  [data-icon="settings"] {
+    width: 3.29863rem;
+    height: 3.29863rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.375rem;
+    margin-bottom: 1.375rem;
+  }
+</style>
