@@ -1,0 +1,30 @@
+---
+import "../styles/global.css";
+const { title, tekst } = Astro.props;
+import Headingpill from "../components/Headingpill.astro";
+
+---
+<header>
+    <Headingpill title="Growing with our Clients" variant="yellow"/>
+ <h3>{title}</h3>
+  <p>{tekst}</p>
+</header>
+<style>
+header{
+    display: flex;
+width: 36.75rem;
+flex-direction: column;
+align-items: flex-start;
+gap: 0.6875rem;
+flex-shrink: 0;
+
+}
+
+h3{
+     font-size: 2.8125rem;
+ 
+  font-weight: 700;
+  line-height: 3.2625rem;
+}
+
+</style>
