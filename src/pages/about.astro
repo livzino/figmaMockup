@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon/components";
 import Base from "../layout/Base.astro";
 import Columns from "../components/Columns.astro";
 import Card from "../components/Card.astro";
@@ -7,6 +8,7 @@ import Titles from "../components/Titles.astro";
 import Button from "../components/Button.astro";
 import Checkmark from "../components/Checkmark.astro";
 import Numbers from "../components/Numbers.astro";
+import Videoimg from "../components/Videoimg.astro";
 import "../styles/global.css";
 ---
 
@@ -49,11 +51,31 @@ tekst="Capitalize on low hanging fruit to identify a ballpark value added activi
     <Card title="Easy Solutions"variant="original"/>
     </Columns>
 </section>
+<section class="divvid">
+    <div class="centered">
+<Headingpill title="our history" variant="green"/>
+ <Titles title="Better Website Means A User Experience" 
+tekst="Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements."/>
+</div>
+<Videoimg />
+</section>
+<section>
+    <img src="../images/ctabox.png" alt="">
+</section>
 
 
 </Base>
 
+
 <style>
+  
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6875rem;
+    text-align: center;
+  }
     .firstflex{
    display: flex;
 flex-flow: row;
