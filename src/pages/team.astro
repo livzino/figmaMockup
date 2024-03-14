@@ -1,0 +1,135 @@
+---
+import { Icon } from "astro-icon/components";
+import Base from "../layout/Base.astro";
+import Columns from "../components/Columns.astro";
+import Card from "../components/Card.astro";
+import Headingpill from "../components/Headingpill.astro";
+import Titles from "../components/Titles.astro";
+import Button from "../components/Button.astro";
+import Checkmark from "../components/Checkmark.astro";
+import Numbers from "../components/Numbers.astro";
+import Videoimg from "../components/Videoimg.astro";
+import Facecard from "../components/Facecard.astro";
+import Nav from "../components/Nav.astro";
+import Rtt from "../components/Rtt.astro";
+import "../styles/global.css";
+---
+
+<Base>
+   <Nav />
+ <div class="containersingle">
+
+	<img src="./images/singlehero.jpg" alt="singleimage" class="singlehero">
+
+	<div class="singleservices">
+			<Headingpill variant="yellow" title="Team"  />
+		<Titles title="The Consultors" 
+tekst=""/>
+	</div>
+
+</div>
+<section class="full">
+      <div>
+     <Columns cols="3">
+     <Headingpill title="Growing with our Clients" variant="yellow"/>
+    </Columns>
+<div class="secbutton">
+
+       <Titles title="Meet Our Great Team" 
+tekst="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation."/>
+<Button />
+</div>
+</div>
+<div class="facefl">
+<Facecard variant="jasmine" title="Sarah Jasmine"/>
+<Facecard variant="john" title="John Carter"/>
+<Facecard variant="daisy" title="Daisy Stella"/>
+
+
+<Facecard variant="maya" title="Maya Elizabeth"/>
+<Facecard variant="ryan" title="Ryan Jackson"/>
+<Facecard variant="lilly" title="Lilly Victoria"/>
+</div>
+
+</section>
+
+<Rtt />
+
+</Base>
+
+<style>
+    .facefl{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .secbutton{
+     display: flex;
+  
+ width: 74.875rem;
+align-items: flex-end;
+gap: 22rem;
+    }
+section {
+ padding: 6.25rem;
+    display: grid;
+    grid:
+      auto /
+      [full-start] 1fr
+      [content] minmax(0, var(--content-width))
+      1fr [full-end];
+    gap: 6rem 4rem;
+    
+   
+
+    > * {
+      grid-column: content;
+
+    }
+
+    .full {
+      grid-column: full;
+ 
+    }
+     
+     }
+
+     .full{
+            background: white;
+         
+     }
+   
+    
+.containersingle {
+  display: grid;
+  place-items: center;
+}
+.singlehero {
+  width: 120%;
+  height: 100%;
+}
+.singlehero,
+.singleservices {
+   grid-area: 1 / 1;
+
+}
+.singleservices{
+ 
+padding: 1rem 1.75rem;
+
+border-radius: 1.8125rem;
+background: rgba(255, 255, 255, 0.85);
+
+backdrop-filter: blur(5.5px);
+display: inline-flex;
+
+flex-direction: column;
+align-items: flex-start;
+gap: 0.625rem;
+
+}
+
+
+
+
+</style>

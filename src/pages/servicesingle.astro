@@ -17,68 +17,188 @@ import "../styles/global.css";
 
 <Base>
    <Nav />
- <div class="containersingle">
+<div class="containerabout">
 
-	<img src="./images/singlehero.jpg" alt="singleimage" class="singlehero">
+	<img src="./images/serviceimg.jpg" alt="heroimage" class="imghero">
 
-	<div class="singleservices">
-			<Headingpill variant="yellow" title="Team"  />
-		<Titles title="The Consultors" 
+	<div class="services">
+			<Headingpill variant="yellow" title="services"  />
+		<Titles title="Service Details" 
 tekst=""/>
 	</div>
 
 </div>
 <section class="full">
-      <div>
-     <Columns cols="3">
-     <Headingpill title="Growing with our Clients" variant="yellow"/>
-    </Columns>
+
+ 
 <div class="secbutton">
 
-       <Titles title="Meet Our Great Team" 
-tekst="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation."/>
-<Button />
+       <Titles title="Financial Projections" 
+tekst="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+<div class="leftright">
+     <Icon name="left" />
+       <Icon name="right" />
 </div>
 </div>
-<div class="facefl">
-<Facecard variant="jasmine" title="Sarah Jasmine"/>
-<Facecard variant="john" title="John Carter"/>
-<Facecard variant="daisy" title="Daisy Stella"/>
+  
+  </section>
 
-
-<Facecard variant="maya" title="Maya Elizabeth"/>
-<Facecard variant="ryan" title="Ryan Jackson"/>
-<Facecard variant="lilly" title="Lilly Victoria"/>
-</div>
-
+<div class="cards">
+<section class="sec">
+  <h3>The Balance Sheet</h3>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, quasi. Totam reprehenderit excepturi tenetur consectetur quia unde fuga recusandae hic.</p>
+</section>
+<section class="sec1">
+  <h3>Income Statement</h3>
+  <p>Nam quisquam dignissimos asperiores fugit. Laudantium ab tempora nesciunt nihil tenetur. Natus cupiditate repellat aspernatur, veritatis alias quisquam dignissimos eaque!</p>
+</section>
+<section class="sec">
+  <h3>Financial Plan</h3>
+  <p>Voluptas suscipit ipsa possimus eum ipsum accusamus non quasi laudantium fugiat harum saepe officia dolore quia, molestias excepturi corporis minima.</p>
+</section>
+<section class="sec">
+  <h3>Financial Ratios</h3>
+  <p>Rerum eaque esse reprehenderit enim vero quod, laboriosam id, unde facilis illum consequuntur omnis a exercitationem, nobis explicabo provident quaerat?</p>
 </section>
 
-<Rtt />
+</div>
+<div class="secgr">
+<figure>
+<img src="./images/style.png" alt="" class="styleimg">
+</figure>
+<div>
+   <Columns cols="2">
+   <Headingpill variant="yellow" title="WE'LL WORK WITH YOU"/>
+</Columns> 
+   <Titles title="What to Expect" 
+tekst="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
 
-</Base>
+<Checkmark />
+</div>
+</div>
 
-<style>
-    .facefl{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
-    .secbutton{
+   <Base/>
+
+   <style>
+      .secgr{
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         margin-top: 150px;
+      }
+      .styleimg{
+    border-radius: 1.2rem;
+}
+figure {
+    width: 400px;
+    height: auto;
+  position: relative;
+  
+  &::before {
+    --square-count: 10;
+    z-index: -1;
+    content: '';
+    position: absolute;
+    inset: -50px -50px auto auto;
+    inline-size: calc(var(--square-count) * 1.34rem - .67rem);
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #BE965D, #976F40, #C99B61, #F0BE7B , #FFCB85, #EEBC79, #C0935B, #976F40) 0 0 / 100% 100%;
+    mask:
+      var(--square-pattern) 0 0 / 1.34rem 1.34rem,
+      var(--square-pattern) .67rem .67rem / 1.34rem 1.34rem;
+  }
+ 
+  &::after {
+    content: '';
+    position: absolute;
+  right: -1rem;
+  top: -1rem;
+    background: green;
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    z-index: -1;
+  }
+}
+      .sec{
+         margin: 10px;
+         width: 50px;
+         height: auto;
+         padding: 30px;
+      }
+         .sec1{
+         margin: 10px;
+         width: 50px;
+         height: auto;
+         padding: 30px;
+         background: #181818;
+         color: white;
+      }
+      .cards {
+  scroll-snap-type: x mandatory;
+}
+ 
+.cards {
+  display: flex;
+  overflow-x: auto;
+
+ 
+  > * {
+    flex: 1 0 30%;
+  }
+}
+ 
+section {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+   border-radius: 1.25rem;
+
+  background: var(--bg-grey);
+  
+  block-size: 50svh;
+  gap: 0.625rem; ;
+  display: grid;
+  
+  > * {
+    max-width: 50ch;
+    color: color-mix(in oklab, var(--bg-grey) var(--bg-black,), currentcolor);
+  }
+  
+ 
+}
+
+
+
+
+
+      .leftright{
+         display: flex;
+         gap: 1rem;
+      }
+          [data-icon="left"] {    
+    width: 3rem;    
+    height: 3rem;  }
+    [data-icon="right"] {    
+    width: 3rem;    
+    height: 3rem;  }
+
+      .secbutton{
      display: flex;
   
  width: 74.875rem;
 align-items: flex-end;
 gap: 22rem;
+padding-bottom: 80px;
+
     }
 section {
- padding: 6.25rem;
+
     display: grid;
     grid:
       auto /
       [full-start] 1fr
       [content] minmax(0, var(--content-width))
       1fr [full-end];
-    gap: 6rem 4rem;
+
     
    
 
@@ -89,34 +209,33 @@ section {
 
     .full {
       grid-column: full;
+          gap: 6rem 4rem;
+           padding: 2.25rem;
  
     }
      
      }
 
      .full{
-            background: white;
+            background: #F5F5F5;
          
      }
    
-    
-.containersingle {
+.containerabout {
   display: grid;
   place-items: center;
 }
-.singlehero {
+.imghero {
   width: 120%;
   height: 100%;
 }
-.singlehero,
-.singleservices {
+.imghero,
+.services {
    grid-area: 1 / 1;
 
 }
-.singleservices{
- 
-padding: 1rem 1.75rem;
-
+.services{
+	padding: 3rem 3.75rem 3.625rem 3.75rem;
 border-radius: 1.8125rem;
 background: rgba(255, 255, 255, 0.85);
 
@@ -130,6 +249,4 @@ gap: 0.625rem;
 }
 
 
-
-
-</style>
+   </style>
