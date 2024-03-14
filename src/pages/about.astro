@@ -5,19 +5,41 @@ import Card from "../components/Card.astro";
 import Headingpill from "../components/Headingpill.astro";
 import Titles from "../components/Titles.astro";
 import Button from "../components/Button.astro";
+import Checkmark from "../components/Checkmark.astro";
+import Numbers from "../components/Numbers.astro";
 import "../styles/global.css";
 ---
 
 <Base>
+<section class="firstflex">
 
+    <div>
+             <Columns cols="3">
+    <Headingpill variant="green" title="Our Vision" />
+    </Columns>
+<Titles title="Turn your ideas into reality." 
+tekst="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps."/>
+<Checkmark />
+    </div>
+    <div>
+<figure>
+<img src="./images/h2photo.jpg" alt="" class="h2img">
+</figure>
+    </div>
+ 
+</section>
+   <Numbers />
 <section class="full">
-    
+    <div>
+     <Columns cols="3">
+     <Headingpill title="Growing with our Clients" variant="yellow"/>
+    </Columns>
 <div class="secbutton">
-     
-<Titles title="Our core values & principles" 
+
+       <Titles title="Our core values & principles" 
 tekst="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps."/>
 <Button />
-
+</div>
 
 </div>
      <Columns cols="4">
@@ -32,6 +54,11 @@ tekst="Capitalize on low hanging fruit to identify a ballpark value added activi
 </Base>
 
 <style>
+    .firstflex{
+   display: flex;
+flex-flow: row;
+padding: 3rem;
+    }
     .secbutton{
      display: flex;
   
@@ -68,4 +95,42 @@ section {
             background: #F5F5F5;
          
      }
+   
+
+.h2img{
+    border-radius: 1.2rem;
+}
+figure {
+    width: 400px;
+    height: auto;
+  position: relative;
+  
+  &::before {
+    --square-count: 10;
+    z-index: -1;
+    content: '';
+    position: absolute;
+    inset: -50px -50px auto auto;
+    inline-size: calc(var(--square-count) * 1.34rem - .67rem);
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #BE965D, #976F40, #C99B61, #F0BE7B , #FFCB85, #EEBC79, #C0935B, #976F40) 0 0 / 100% 100%;
+    mask:
+      var(--square-pattern) 0 0 / 1.34rem 1.34rem,
+      var(--square-pattern) .67rem .67rem / 1.34rem 1.34rem;
+  }
+ 
+  &::after {
+    content: '';
+    position: absolute;
+  right: -1rem;
+  top: -1rem;
+    background: green;
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    z-index: -1;
+  }
+}
+
+  
 </style>
