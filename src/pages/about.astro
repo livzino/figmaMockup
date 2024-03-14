@@ -1,13 +1,25 @@
 ---
 import Base from "../layout/Base.astro";
 import Columns from "../components/Columns.astro";
-import Card from "../components/Card.astro"
-
-import "../styles/global.css"
+import Card from "../components/Card.astro";
+import Headingpill from "../components/Headingpill.astro";
+import Titles from "../components/Titles.astro";
+import Button from "../components/Button.astro";
+import "../styles/global.css";
 ---
 
 <Base>
-<section>
+
+<section class="full">
+    
+<div class="secbutton">
+     
+<Titles title="Our core values & principles" 
+tekst="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps."/>
+<Button />
+
+
+</div>
      <Columns cols="4">
     <Card  title="Creative Ideas" variant="original" />
     <Card  title="Best Features"variant="original"/>
@@ -17,11 +29,19 @@ import "../styles/global.css"
 </section>
 
 
-
 </Base>
 
 <style>
-      section {
+    .secbutton{
+     display: flex;
+  
+ width: 74.875rem;
+align-items: flex-end;
+gap: 22rem;
+
+    }
+section {
+ padding: 6.25rem;
     display: grid;
     grid:
       auto /
@@ -29,13 +49,23 @@ import "../styles/global.css"
       [content] minmax(0, var(--content-width))
       1fr [full-end];
     gap: 6rem 4rem;
+    
+   
 
     > * {
       grid-column: content;
+
     }
 
     .full {
       grid-column: full;
+ 
     }
-      }
+     
+     }
+
+     .full{
+            background: #F5F5F5;
+         
+     }
 </style>
